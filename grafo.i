@@ -1,4 +1,4 @@
-%module libpbn
+%module grafo
 %{
 #include"grafo.h"
 %}
