@@ -1,4 +1,4 @@
-from libpbn import *
+from grafo import *
 
 def castellano(booleano):
     if  booleano: 
@@ -12,7 +12,7 @@ g.add_nodo()
 g.add_arco(2,3)
 g.add_nodo()
 g.add_arco(3,4)
-g.add_arco(0, 8)
+g.add_arco(0,8)
 
 
 print(castellano(g.hay_arco(2,1)) + "hay arco entre los nodos")
