@@ -56,7 +56,7 @@ bool Grafo::hay_camino(int d, int h)
          int x = d-1;
          for(int i = d; i > h; i--){
             if(hay_arco(i,x)==1) x-=1;
-            if (x<d) return true;
+            if (x<h) return true;
          }
     }
     return false;
