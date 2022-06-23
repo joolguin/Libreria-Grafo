@@ -2,6 +2,11 @@
 #include <list>
 #include <iostream>
 
+Grafo::Grafo()
+{
+    list<int>l;
+    this->adj = &l;
+}
 
 Grafo::Grafo(int V)
 {
@@ -17,6 +22,7 @@ void Grafo::add_arco(int d, int h)
     }
     else cout<<"node out of range"<<endl;     
 }
+
 int Grafo::add_nodo(){
     adjnew = new list<int>[v+1];
     list<int>::iterator x;

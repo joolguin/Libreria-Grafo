@@ -7,6 +7,7 @@ class Grafo{
     list<int> *adj;
 	list<int> *adjnew;
     public:
+    Grafo();
     Grafo(int V);
     void add_arco(int d, int h); 
 	int add_nodo(); 
