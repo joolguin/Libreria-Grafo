@@ -1,7 +1,6 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/jose/Documents/PBN/C++/T4'
 swig -python -c++ grafo.i
- 
 g++ -std=c++11 -Wall -Wextra -Wundef -Werror -Wuninitialized -Winit-self -c -o grafo.o grafo.cpp
 g++ -fPIC -c grafo_wrap.cxx -o grafo_wrap.o -I/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/include/python3.8
 g++ -shared grafo_wrap.o grafo.o -undefined suppress -flat_namespace -o _grafo.so -L/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/include/python3.8

@@ -6,11 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Thu Jun 23 16:50:23 2022
+# Make data base, printed on Thu Jun 23 18:13:37 2022
 
 # Variables
 
@@ -43,7 +40,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/dq/tyfcrvx96cb3220ch9gxp1xw0000gp/T/vscode-ipc-56028658-3e38-454d-a338-127a5ab53fb2.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/dq/tyfcrvx96cb3220ch9gxp1xw0000gp/T/vscode-ipc-ed12fb49-6a6b-4787-8dd9-083e37790f73.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -175,9 +172,9 @@ LANG = C
 
 # Directories
 
-# . (device 16777220, inode 4627510): 10 files, no impossibilities.
+# . (device 16777220, inode 4627510): 15 files, no impossibilities.
 
-# 10 files, no impossibilities in 1 directories.
+# 15 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -280,6 +277,8 @@ grafo.o: grafo.cpp
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Jun 23 16:50:23 2022
+# Finished Make data base on Thu Jun 23 18:13:37 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
