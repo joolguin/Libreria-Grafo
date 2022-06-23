@@ -1,0 +1,6 @@
+.vscoode
+_libpbn.so
+grafo.o
+lib_wrap.o
+lib_wrap.cxx
+libpbn.py
