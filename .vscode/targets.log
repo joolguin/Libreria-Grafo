@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Thu Jun 23 16:46:06 2022
+# Make data base, printed on Thu Jun 23 16:50:23 2022
 
 # Variables
 
@@ -23,7 +23,6 @@ VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
- 
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
 @F = $(notdir $@)
@@ -176,9 +175,9 @@ LANG = C
 
 # Directories
 
-# . (device 16777220, inode 4627510): 11 files, no impossibilities.
+# . (device 16777220, inode 4627510): 10 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+# 10 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -186,15 +185,14 @@ LANG = C
 
 # Files
 
-_grafo.so: lib_wrap.cxx grafo.o
+_grafo.so: grafo_wrap.cxx grafo.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `makefile', line 8):
-	$(CC) -fPIC -c lib_wrap.cxx -o lib_wrap.o -I$(rutapython)
-	$(CC) -shared lib_wrap.o grafo.o -undefined suppress -flat_namespace -o _grafo.so -L$(rutapython)
+	$(CC) -fPIC -c grafo_wrap.cxx -o grafo_wrap.o -I$(rutapython)
+	$(CC) -shared grafo_wrap.o grafo.o -undefined suppress -flat_namespace -o _grafo.so -L$(rutapython)
 	
- 
 
 # Not a target:
 all:
@@ -217,18 +215,10 @@ grafo.h:
 #  Modification time never checked.
 #  File has not been updated.
 
-lib_wrap.cxx: lib.i grafo.h
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `makefile', line 15):
-	swig -python -c++ lib.i
-	
-
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-23 16:45:59
+#  Last modified 2022-06-23 16:47:19
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -240,11 +230,13 @@ grafo.cpp:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-lib.i:
+grafo_wrap.cxx: grafo.i grafo.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+#  commands to execute (from `makefile', line 15):
+	swig -python -c++ grafo.i
+	
 
 # Not a target:
 .DEFAULT:
@@ -257,9 +249,15 @@ clean:
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `makefile', line 18):
-	rm -f *.o $(exe) *.so *.so *.cxx libpbn.py
+	rm -f *.o $(exe) *.so *.so *.cxx grafo.py
 	rm -r -f __pycache__
 	
+
+# Not a target:
+grafo.i:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 grafo.o: grafo.cpp
 #  Implicit rule search has not been done.
@@ -282,6 +280,6 @@ grafo.o: grafo.cpp
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Jun 23 16:46:06 2022
+# Finished Make data base on Thu Jun 23 16:50:23 2022
 
  
